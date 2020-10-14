@@ -1,0 +1,45 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+.alert {
+    padding: 20px 40px;
+    background-color: #ebe9e9;
+    color: black;
+    width: 450px;
+    height: 191px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 13px;
+    text-align: center;
+}
+#para{
+    text-align: center;
+    font-size: 16px;
+    padding: 5px 0px;
+}
+
+.check {
+    display: inline-block;
+    padding: 15px 16px;
+    /* margin: 0px 0px 0px 112px; */
+    /* #9cc431 */
+    border: 1px solid #bbec33;
+    background-color:#bbec33;
+    border-radius: 50%;
+}
+
+/* .closebtn {
+    margin-left: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+    font-weight: bold;
+} */

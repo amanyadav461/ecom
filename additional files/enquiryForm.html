@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>HomeCenter</title>
+</head>
+
+<body>
+    <!-- --------------- navbar ----------- -->
+    <nav>
+        <div class="topnav">
+            <div class="logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="text" name="search" placeholder="Search..">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <a href="#">
+                <p>Enquiry List <i style="font-size:24px" class="fa" id="shopping-bag">&#xf290;</i></p>
+            </a>
+        </div>
+    </nav>
+    <hr>
+    <!------------------------------------Enquiry Popup ------------------------------------------->
+    <div class="enquiryform_bg">
+        <div class="alert">
+            <div class="check"><i class="fa fa-check" style="font-size:42px;color:white"></i></div>
+            <!-- <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> -->
+            <p id="para">Thanks for enquiry with home centre for your corporate gifting requirements. Our Relationship Manager will
+                reach out to you shortly to process this enquiry.</strong></p>
+        </div>
+    </div>
+    <!-- --------------------------------- home section for enquiry form ------------------------- -->
+    <section class="home">
+        <form action="" method="post" id="enquiryform">
+            <div class="container1">
+                <div class="items"><label for="fullname">Full Name</label>
+                    <input type="text" placeholder="Enter your Full name" name="fullname" required class="wcon"></div>
+
+                <div class="items"><label for="Cname">Comapany Name</label>
+                    <input type="text" placeholder="Enter your comapany name" name="Cname" required class="wcon"></div>
+
+                <div class="items"><label for="Dname">Designation Name(optional)</label>
+                    <input type="text" placeholder="Enter your designation" name="Dname" class="wcon"></div>
+
+                <div class="items input-group"><label for="Phone">Phone Number</label>
+                    <input type="tel" placeholder="Enter your Phone number" name="Phone" required class="wcon form-control">
+                </div>
+
+                <div class="items"><label for="email_id">Email ID</label>
+                    <input type="email" placeholder="Enter your email" name="email_id" required class="wcon"></div>
+
+                <div class="items"><label for="address">Address(optional)</label>
+                    <input type="text" placeholder="Enter your address" name="address" class="wcon"></div>
+
+                <div class="items"><label for="Pcode">Pincode</label>
+                    <input type="text" maxlength="6" placeholder="Enter your pincode" name="Pcode" required class="wcon"></div>
+
+                <div class="items"><label for="Tocall">Preferred Date/Time to Call</label>
+                    <input type="text" placeholder="Enter your Preferred Date/Time to Call" name="Tocall" required
+                        class="wcon"></div>
+
+
+            </div>
+            <button type="submit" class="btn para" id="sub-btn">Place Enquiry</button>
+            <p class="para">"This offer can be withdrawn by the company at any time at its sole discretion" The products
+                are subject to availibilty. <a href="#">*T&C apply.</a></p>
+        </form>
+    </section>
+    <!-- ------------------------ 2nd strip section --------------- -->
+    <section class="container">
+        <footer>
+            <hr>
+            <div class="firstfoot-left">
+                <div class="firstfoot_in_cont">
+                    <a href="#">
+                        <div class="details">
+                            <div class="icon">
+                                <i class="fa fa-phone" style="font-size:42px"></i>
+                            </div>
+                            <span class="txt">
+                                <p class="uptxt">Talk to us</p>
+                                <p>1800-212-7500</p>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="details">
+                            <div class="icon">
+                                <i class="fa fa-question-circle" style="font-size:42px"></i>
+                            </div>
+                            <div class="txt">
+                                <p class="uptxt">HomeCentre</p>
+                                <p>homecentre.in/help</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="details">
+                            <div class="icon">
+                                <i class="fa fa-envelope" style="font-size:42px"></i>
+                            </div>
+                            <div class="txt">
+                                <p class="uptxt">Write to us</p>
+                                <p>help@homecentre.in</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- ---- social media icons  ---- -->
+                <div class="social-icon">
+                    <div class="details">
+                        <div class="social">
+                            <a href="#" class="fa fa-facebook" style="font-size: 22px;"></a>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="social">
+                            <a href="#" class="fa fa-twitter" style="font-size: 22px;"></a>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="social" #insta>
+                            <a href="#" class="fa fa-instagram" style="font-size: 22px;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ---------------------------- footer --------------------- -->
+            <hr>
+            <div class="Mainfooter">
+                <div class="firstfoot1">
+                    <a href=""><img src="./images/logo.png" alt="Logo"></a>
+                </div>
+                <div class="txt-foot">
+                    <p>&#9400; 2020 RNA Intellectual Property Limited.</p>
+                    <p>TERMS & CONDITION - Privacy Policy</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script type="text/javascript">
+        $("#enquiryform").submit(function (e) {
+            e.preventDefault();
+                var enquirydata = [];
+                $.each($("#enquiryform").serializeArray(), function(){
+                    console.log(enquirydata[this.name] = this.value);
+                });
+                $(".enquiryform_bg").css("display","block");
+                $('body').css("overflow","hidden");
+                console.log(enquirydata['fullname']);
+        });
+
+    </script>
+</body>
+</html>
