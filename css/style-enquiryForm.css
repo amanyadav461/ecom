@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+body {
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* #################################### navigation bar ################################# */
+.logo{
+    width: 150px;
+    height: 50px;
+    padding: 5px 5px 20px 5px;
+    position: relative;
+}
+.topnav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 1200px; */
+    margin: 0 35px;
+    padding: 15px 5px;
+    /* overflow: hidden; */
+}
+.topnav input[type=text]{
+    padding: 10px 17px;
+    /* margin-top: 8px; */
+    font-size: 17px;
+    border: none;
+    width: 300px;
+    background-color: #ddd;
+    outline: none;
+    position: relative;
+}
+.topnav .search-container button {
+    float: right;
+    padding: 10px 10px;
+    /* margin-top: 8px; */
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+}
+.topnav a{
+    text-decoration: none;
+    color: black;
+}
+#shopping-bag{
+    margin-left: 6px;
+}
+.logo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/*################################################# home section ######################################*/
+section.home{
+    margin: 20px 20px 60px 15px;
+    padding: 0 60px;
+}
+.container1{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+}
+.items{
+    background-color: white;
+    border: 2px solid white;
+    padding: 5px 25px;
+    margin: 5px 5px;
+    /* outline: none; */
+    box-sizing: border-box;
+}
+.wcon{
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 5px;
+    outline: none;
+    box-sizing: border-box;
+}
+#sub-btn{
+    display: block;
+    width: 96%;
+    padding: 10px 15px;
+    outline: none;
+    color: white;
+    background-color:#bbec33;
+    border: none;
+    cursor: pointer;
+    margin: 30px auto 20px auto;
+}
+p.para{
+    font-size: 12px;
+    text-align: center;
+}
+.container1 label{
+    font-size: 13px;
+}
+
+/* ##################################### 2nd strip section for contact us ############################# */
+section.container{
+    margin: 0 50px;
+}
+
+div.firstfoot-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+div.social-icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    margin-left: 28%;
+}
+.social a{
+    text-decoration: none;
+}
+div.details{
+    display: flex;
+    flex-direction: row;
+    /* margin-left: 20px; */
+    margin: 30px 0 30px 10px;
+    padding: 20px 15px;
+}
+p{
+    margin-left: 10px;
+    font-size: 16px;
+}
+p.uptxt{
+    font-size: 12px;
+    padding-top: 5px;
+    color: rgb(161, 161, 161);
+}
+
+.fa-facebook, .fa-twitter, .fa-instagram{
+    color: black;
+}
+/* ############################### main footer ################################ */
+footer{
+    margin: 0 50px;
+}
+div.Mainfooter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    
+}
+.first-foot1,.txt-foot{
+    /* margin-left: 30px; */
+    margin: 30px 0 30px 15px;
+    padding: 20px 20px;
+}
+.txt-foot p{
+    font-size: 14px;
+    color: rgb(161, 161, 161);
+}
