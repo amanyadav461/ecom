@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/dave.js"></script>
+    <title>HomeCenter</title>
+</head>
+
+<body>
+    <!-- --------------- navbar ----------- -->
+    <nav>
+        <div class="topnav">
+            <div class="logo">
+                <a href="index.html"><img src="./images/logo-homecentre.svg" alt=""></a>
+            </div>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="text" name="search" placeholder="Search..">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <a href="#">
+                <p>Enquiry List <i style="font-size:24px" class="fa" id="shopping-bag">&#xf290;</i></p>
+            </a>
+        </div>
+    </nav>
+<div class="product_pgbody_container">
+    <!------------------------------------------------Enquiry FORM STARTS STARTS STARTS------------------------------------------------------------------------>
+    <!------------------------------------Enquiry Popup ------------------------------------------->
+    <div class="enquiry_page_container">
+        <hr>
+        <div class="enquiryform_bg">
+            <div class="alert">
+                <div class="check"><i class="fa fa-check" style="font-size:42px;color:white"></i></div>
+                <!-- <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> -->
+                <p id="para">Thanks for enquiry with home centre for your corporate gifting requirements. Our Relationship Manager will
+                    reach out to you shortly to process this enquiry.</strong></p>
+            </div>
+        </div>
+            <!-- --------------------------------- home section for enquiry form ------------------------- -->
+        <section class="home">
+            <form action="" method="post" id="enquiryform">
+                <div class="container1">
+                    <div class="items"><label for="fullname">Full Name</label>
+                        <input type="text" placeholder="Enter your Full name" name="fullname" required class="wcon"></div>
+
+                    <div class="items"><label for="Cname">Comapany Name</label>
+                        <input type="text" placeholder="Enter your comapany name" name="Cname" required class="wcon"></div>
+
+                    <div class="items"><label for="Dname">Designation Name(optional)</label>
+                        <input type="text" placeholder="Enter your designation" name="Dname" class="wcon"></div>
+
+                    <div class="items input-group"><label for="Phone">Phone Number</label>
+                        <input type="tel" placeholder="Enter your Phone number" name="Phone" required class="wcon form-control">
+                    </div>
+
+                    <div class="items"><label for="email_id">Email ID</label>
+                        <input type="email" placeholder="Enter your email" name="email_id" required class="wcon"></div>
+
+                    <div class="items"><label for="address">Address(optional)</label>
+                        <input type="text" placeholder="Enter your address" name="address" class="wcon"></div>
+
+                    <div class="items"><label for="Pcode">Pincode</label>
+                        <input type="text" maxlength="6" placeholder="Enter your pincode" name="Pcode" required class="wcon"></div>
+
+                    <div class="items"><label for="Tocall">Preferred Date/Time to Call</label>
+                        <input type="text" placeholder="Enter your Preferred Date/Time to Call" name="Tocall" required
+                            class="wcon"></div>
+
+
+                </div>
+                <button type="submit" class="btn para" id="sub-btn">Place Enquiry</button>
+                <p class="para">"This offer can be withdrawn by the company at any time at its sole discretion" The products
+                    are subject to availibilty. <a href="#">*T&C apply.</a></p>
+            </form>
+        </section>        
+    </div>
+    <!-------------------------------------------ENQUIRY FORM ENDS ENDS ENDS ENDS -------------------------------------------->
+        <div class="pg_container">
+            <hr>
+            <div class="pg5_upper_container">
+                <ul class="pg5_upper_ul">
+                    <li class="pg5_upper_li">
+                        <ol class="pg5_slug_area">
+                            <li>
+                                <p>Home / Furnishing / Bedding / Double Bedsheets</p>
+                            </li>
+                            <li>
+                                <h1 class="pg5_upper_li_h3" id="product_mainTitle"></h1>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="pg5_upper_li">
+                        <ol class="pg5_upper_li_ol2">
+                            <li class="pg5_upper_lu_ol2_li">
+                                <p id="productpg_price"></p>
+                            </li>
+                            <li>
+                                <ul class="pg5_upper_btn_li">
+                                    <li><input type="number" name="" placeholder="Qty" id="product_quanity_add"></li>
+                                    <li><button class="pg5_upper_btn2" id="add_enq_list">Add to Enquiry List</button></li>
+                                    <li><button class="pg5_upper_btn3">Enquire Now</button></li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <div class="pg5_notif_container">
+                            <div class="pg5_notif_sec1">
+                                <div class="pg5_notif_pro_img_con"><img src="./images/5.png"></div>
+                                <div class="pg5_notif_sec1-1">
+                                    <div class="pg5_notif_tickmark"><img src="./images/check.png"></div>
+                                    <div class="pg5_notif_msg">
+                                        <p class="pg5_notif_title">Successfully Added To Your Enquiry List</p>
+                                        <p class="pg5_notif_subtitle">Basket Subtotal (1 item) $999</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pg5_notif_sec2">
+                                <button class="pg5_notif_button1">Continue Shopping</button>
+                                <button class="pg5_notif_button2">Enquire Now</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <hr id="hr">
+            <div class="pg5_middle_cont">
+                <ul class="pg5_middle_ul">
+                    <li class="pg5_product_imgcontianer">
+                        <div class="pg5_product_imgbox">
+                            <img class="pg5_middle_mainimg" id="pg5ImgBox" src="./images/5.png" alt="">
+                        </div>
+                        <ul class="pg5_middle_ul3">
+                            
+                        </ul>
+                    </li>
+                    <li class="pg5_middle_ul_li2">
+                        <ol>
+                            <li class="pg5_middle_ol_head">
+                                <h3>Overview</h3>
+                            </li>
+                            <li>
+                                <p id="moretext">This vibrant and lighrweight double bedsheet set of three pieces is
+                                    defined by a modish
+                                    print on the surface to impart a freash appeal to your bedroom decor. Crafted
+                                    fromj soft
+                                    cotton, it includes a double bedsheet with a pair of pillow covers, featuring
+                                    similar
+                                    prints, to create an ecletic mix of comfort and style. 150 thread count ensures
+                                    breathability and makes it suitable for everyday bedding.</p>
+                            </li>
+                            <li>
+                                <ul class="pg5_middle_ul2">
+                                    <li class="pg5_product_descpt1">
+                                        <ol class="pg5_middle_list_dots1">
+                                            <li id="">Pack Content: 1 Double Bedsheet,2 Pillow Covers</li>
+                                            <li>Thread Count : 150TC</li>
+                                            <li>Set Size : Set Of 3 Pcs. Care Instructions : Machine Wash, Tumble
+                                                Dry, Do
+                                                not Bleach, Iron Medium setting. Reactive printed fabrics tend to
+                                                lose some
+                                                colour while washing. These are extra dyes that the fabric intakes
+                                                while
+                                                printing. The product remains as is after washing.</li>
+                                            <li>Please do not take this as a defect</li>
+                                            <li>Country of Origin : India Manufactured/Imported By : Lifestyle Int
+                                                Pvt
+                                                Ltd.77 Degree Town Centre.Building No.3. West Wing.Off HAL Airport
+                                                Road.Yamlur.Banglore-560037</li>
+                                        </ol>
+                                    </li>
+                                    <li id="more" class="pg5_product_descpt2">
+                                        <ol class="pg5_middle_list_dots2">
+                                            <li>Size : Double Bed</li>
+                                            <li>Material : Cotton</li>
+                                            <li>Design : Printed</li>
+                                            <li>Collection : My Beeding</li>
+                                            <li>Contact Us/Consumer Care: Name: Syed Ismail, Email:
+                                                help@homecentre.in,
+                                                Lifestyle International Pvt Ltd, 1800-212-7500
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="pg5_product_descpt3">
+                                <div class="pg5_readmore_button"><button class="moreless-button" type="button" id="readBtn" onclick="read()">Read More <i class="fas fa-chevron-down"></i></button></div>
+                                <div class="pg5_payment_details">
+                                    <h3 class="pg5_middle_h3"> <i class="fas fa-info-circle"></i> Enquiry & Purchase</h3>
+                                    <p>We accept PayPal, Debit and Credit Cards, Cash on Delivery, NetBanking, Wallets,
+                            Landmark
+                            Rewards Points and Gift Cards.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+            <hr id="hr">
+            <ul class="product_cont_ul">
+
+            </ul>
+        </div>    
+            <!-- ------------------------ 2nd strip section --------------- -->
+    </div>
+    <section class="container">
+        <footer>
+            <hr>
+            <div class="firstfoot-left">
+                <div class="firstfoot_in_cont">
+                    <a href="#">
+                        <div class="details">
+                            <div class="icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <span class="txt">
+                                <p class="uptxt">Talk to us</p>
+                                <p class='lowtxt'>1800-212-7500</p>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="details">
+                            <div class="icon">
+                                <i class="fa fa-question-circle"></i>
+                            </div>
+                            <div class="txt">
+                                <p class="uptxt">HomeCentre</p>
+                                <p class='lowtxt'>homecentre.in/help</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="details">
+                            <div class="icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="txt">
+                                <p class="uptxt">Write to us</p>
+                                <p class='lowtxt'>help@homecentre.in</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- ---- social media icons  ---- -->
+                <div class="social-icon">
+                    <div class="details">
+                        <div class="social">
+                            <a href="#" class="fa fa-facebook"></a>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="social">
+                            <a href="#" class="fa fa-twitter" ></a>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="social" #insta>
+                            <a href="#" class="fa fa-instagram" class='lowtxt'></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ---------------------------- footer --------------------- -->
+            <hr>
+            <div class="Mainfooter">
+                <div class="firstfoot1">
+                    <a href=""><img src="./images/footer-logo.svg" alt=""></a>
+                </div>
+                <div class="txt-foot">
+                    <p>&#9400; 2020 RNA Intellectual Property Limited.</p>
+                    <p>TERMS & CONDITION - Privacy Policy</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script type="text/javascript">
+        //########## GET all attributes required to patch during enquiry #############
+        //ajaxRequestWithData("/attributes/customer/name","GET",{},function(data){console.log(data)});
+        //############################
+        const pid = getCookie("product_id");
+        create_product_enquiry(pid, "1", "opened", function(data) {
+            console.log("Product Enquiry updated to opened: "+data)
+        });
+        get_product(pid,{}, function(data) {
+            $("#product_mainTitle").text(data.name);
+            $("#productpg_price").text("$"+data.selling_price)
+            $("#pg5ImgBox").attr("src",data.image_1)
+
+            $(".pg5_middle_ul3").html(`
+                <li class="pg5_middle_ul3_li1"><img class="pg5_small_img" src="${data.image_1}" alt=""></li>
+                <li class="pg5_middle_ul3_li1"><img class="pg5_small_img" src="${data.image_2}" alt=""></li>
+                <li class="pg5_middle_ul3_li1"><img class="pg5_small_img" src="${data.image_3}" alt=""></li>
+                <li class="pg5_middle_ul3_li1"><img class="pg5_small_img" src="${data.image_4}" alt=""></li>
+                <li class="pg5_middle_ul3_li1"><img class="pg5_small_img" src="${data.image_5}" alt=""></li>
+                `);
+            console.log("This is category: "+data.category);
+            get_products({"category": data.category,"page_size":4}, function(data) {
+                var return_size = data['data'].length;
+                for(var i = 0; i < return_size; i++){
+                    $(".product_cont_ul").append(`
+                        <li class="product_cont_ul_li" data-pid="${data['data'][i]['product_id']}">
+                            <ol class="product_solo_cont">
+                                <li>
+                                    <div class="img_container">
+                                        <img class="product_img" src="${data['data'][i]['image_1']}" alt="">
+                                        <button class="btn-2">Quick View</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="small_img_container"><img class="small_img" src="${data['data'][i]['image_1']}" alt=""></div>
+                                </li>
+                                <li>
+                                    <h4 class="product_price">${data['data'][i]['selling_price']}</h4>
+                                </li>
+                                <li>
+                                    <h4 class="product_heading">${data['data'][i]['name']}</h4>
+                                </li>
+                            </ol>
+                        </li>
+                    `);                                   
+                }                   
+            });
+        });
+
+        //################## Toogle Image Gallery ###################
+        $(document.body).on("click", ".pg5_middle_ul3_li1", function(){
+           $("#pg5ImgBox").attr('src', $(this).children("img").attr("src"));
+        });
+        //enquire now button ###################
+        $('.pg5_upper_btn3').on("click", function(){
+            $('.enquiry_page_container').css("display","block");
+            $('.pg_container').css("display","none");
+            $('.product_pgbody_container').css({"display":"flex","flex-direction": "column"});
+        });
+        //add to enquire list ######################
+        $("#add_enq_list").on("click", function(){
+            var product_quanityadd = $("#product_quanity_add").val();
+            if(product_quanityadd.length != 0){
+                console.log(product_quanityadd);
+            }else{
+                console.log("no quanity added");
+            }
+        });
+        //read more 0r less ############################
+        var i=0;
+        function read(){
+            if(!i){
+                document.getElementById("moretext").style.display = "inline";
+                document.getElementById("more").style.display = "inline";
+                document.getElementById("readBtn").innerHTML= "Read Less";
+                i=1;
+            }
+            else {
+                document.getElementById("moretext").style.display = "none";
+                document.getElementById("more").style.display = "none";
+                document.getElementById("readBtn").innerHTML= "Read More";
+                i=0;
+            }
+        }
+    //################### ENQUIRY FOR SCRIPT #############
+        $("#enquiryform").submit(function (e) {
+            e.preventDefault();
+                var enquirydata = [];
+                $.each($("#enquiryform").serializeArray(), function(){
+                    console.log(enquirydata[this.name] = this.value);
+                });
+                $(".enquiryform_bg").css("display","block");
+                $('body').css("overflow","hidden");
+                console.log(enquirydata['fullname']);
+        });
+    </script>
+</body>
+
+</html>
