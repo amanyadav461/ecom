@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/dave.js"></script>
+    <title>HomeCenter</title>
+</head>
+
+<body>
+    <!-- --------------- navbar ----------- -->
+    <nav>
+        <div class="topnav">
+            <div class="logo">
+                <a href="index.html"><img src="./images/logo-homecentre.svg" alt=""></a>
+            </div>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="text" name="search" placeholder="Search..">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <a href="#">
+                <p>Enquiry List <i style="font-size:24px" class="fa" id="shopping-bag">&#xf290;</i></p>
+            </a>
+        </div>
+    </nav>
+    <hr>
+    <!-- ------------------------ home section  ---------------- -->
+    <section id="home-container">
+        <div id="home"></div>
+        <!-- ---- popup-form ----  -->
+        <div class="form-popup" id="myForm">
+            <form action="#" class="form-container" id="pincodeform" method="POST">
+                <div><span class="close" title="Close" style="float: right;">&times;</span></div>
+                <p style="text-align: center;margin: 10px 0 5px 0;">Please enter your Pincode</p>
+                <div class="textfield">
+                    <input type="number" placeholder="" name="number" class="uinput" required maxlength="1">
+                    <input type="number" placeholder="" name="number" class="uinput" required maxlength="1">
+                    <input type="number" placeholder="" name="number" class="uinput" required maxlength="1">
+                    <input type="number" placeholder="" name="number" class="uinput" required maxlength="1">
+                    <input type="number" placeholder="" name="number" class="uinput" required maxlength="1">
+                    <input type="number" placeholder="" name="number" class="uinput" required maxlength="1">
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+    <!-- ------------------------ 2nd strip section --------------- -->
+    <section class="container">
+        <footer>
+            <hr>
+            <div class="firstfoot-left">
+                <div class="firstfoot_in_cont">
+                    <a href="#">
+                        <div class="details">
+                            <div class="icon">
+                                <i class="fa fa-phone" ></i>
+                            </div>
+                            <span class="txt">
+                                <p class="uptxt">Talk to us</p>
+                                <p class='lowtxt'>1800-212-7500</p>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="details">
+                            <div class="icon">
+                                <i class="fa fa-question-circle"></i>
+                            </div>
+                            <div class="txt">
+                                <p class="uptxt">HomeCentre</p>
+                                <p class='lowtxt'>homecentre.in/help</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="details">
+                            <div class="icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="txt">
+                                <p class="uptxt">Write to us</p>
+                                <p class='lowtxt'>help@homecentre.in</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- ---- social media icons  ---- -->
+                <div class="social-icon">
+                    <div class="details">
+                        <div class="social">
+                            <a href="https://www.facebook.com/HomeCentreIndia/" class="fa fa-facebook"></a>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="social">
+                            <a href="https://twitter.com/homecentreindia" class="fa fa-twitter"></a>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="social" >
+                            <a href="https://www.instagram.com/homecentreindia/" class="fa fa-instagram"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ---------------------------- footer --------------------- -->
+            <hr>
+            <div class="Mainfooter">
+                <div class="firstfoot1">
+                    <a href=""><img src="./images/footer-logo.svg" alt=""></a>
+                </div>
+                <div class="txt-foot">
+                    <p>&#9400; 2020 RNA Intellectual Property Limited.</p>
+                    <p>TERMS & CONDITION - <a href="https://www.homecentre.in/in/en/privacypolicy" class="pnp">Privacy Policy</a></p>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script type="text/javascript">
+       $(".uinput").keyup(function () {
+            if (this.value.length == this.maxLength) {
+              var $next = $(this).next('.uinput');
+              if ($next.length)
+                  $(this).next('.uinput').focus();
+              else
+                  $(this).blur();
+            }
+        });
+
+        
+
+        $("#pincodeform").submit(function(e) {
+            e.preventDefault();
+            var pincodedata;
+                $.each($("#pincodeform").serializeArray(), function(){
+                if(pincodedata == null){
+                    pincodedata = this.value
+                }else{
+                    if($.isNumeric(pincodedata)){
+                        pincodedata += this.value;    
+                    }else{
+                        console.log("Please Enter Number Only");
+                        return false;
+                    }
+                    
+                }
+                
+            });
+                if(pincodedata.length == 6){
+                    setCookie("pincode",pincodedata)
+                    patch_customer({"pincode":pincodedata},function(){
+                        window.location="productlist.html";
+                    });
+                }else{
+                    console.log("Please Enter Complete Pincode");
+                }
+        });
+    </script>
+</body>
+
+</html>
+<!-- /
+
+ -->
